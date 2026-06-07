@@ -4,13 +4,16 @@ import { registerUser } from "../controllers/user.controller.js";
 
 const router = Router()
 
-router.route("/register").post(upload.fields([
+router.route("/register" , (req, res, next) => {
+    console.log("Route reached");
+    next();
+  },).post(upload.fields([
     {
         name : "avatar",
         maxCount  : 1
     },
     {
-        name : " coverImage",
+        name : "coverImage",
         maxCount : 1
     }
 ]),registerUser)

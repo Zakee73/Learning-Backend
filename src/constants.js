@@ -1,1 +1,1 @@
-export const DB_NAME = "Mozify Project";
+export const DB_NAME = "Mozify";
